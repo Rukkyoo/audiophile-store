@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ShopProduct from "./ShopProduct";
-import AudioWriteup from "./AudioWriteup";
-import Footer from "./Footer";
+import ShopProduct from "./ShopProduct.jsx";
+import AudioWriteup from "./AudioWriteup.jsx";
+import Footer from "./Footer.jsx";
 
 const HeadphoneProductUnit = [
   {

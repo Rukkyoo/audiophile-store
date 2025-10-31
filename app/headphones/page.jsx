@@ -1,7 +1,7 @@
 "use client";
 
-import { Header } from "../components/Header";
-import HeadphoneProduct from "../components/HeadphoneProduct";
+import { Header } from "../components/Header.jsx";
+import HeadphoneProduct from "../components/HeadphoneProduct.jsx";
 
 export default function HeadphonesPage() {
   return (
