@@ -8,7 +8,7 @@ import Footer from "./Footer.jsx";
 const HeadphoneProductUnit = [
   {
     id: 1,
-    image: "/xx99-headphones.jpg",
+    image: "/xx99-headphones.png",
     type: "NEW PRODUCT",
     name: "XX99 MARK II HEADPHONES",
     description:

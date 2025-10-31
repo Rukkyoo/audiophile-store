@@ -3,7 +3,7 @@ import { Header } from "./components/Header.jsx";
 import ShopProduct from "./components/ShopProduct.jsx";
 import ProductDesc from "./components/ProductDesc.jsx";
 import AudioWriteup from "./components/AudioWriteup.jsx";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer.jsx"
 import Image from "next/image";
 
 export default function Home() {
