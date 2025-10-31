@@ -1,12 +1,10 @@
 "use client";
-import { Header } from "./components/Header";
-import ShopProduct from "./components/ShopProduct";
-import ProductDesc from "./components/ProductDesc";
-import AudioWriteup from "./components/AudioWriteup";
-import Footer from "./components/Footer"
+import { Header } from "../components/Header";
+import ShopProduct from "../components/ShopProduct";
+import ProductDesc from "../components/ProductDesc";
 import Image from "next/image";
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex flex-col items-center">
       <header className="bg-[#141414] w-full flex flex-row items-center justify-center">
@@ -53,16 +51,8 @@ export default function Home() {
           <ShopProduct />
         </section>
 
-        <section className="bg-white w-full flex flex-col justify-center items-center md:w-[70%] ">
+        <section className="flex flex-col items-center md:w-[70%]">
           <ProductDesc />
-        </section>
-
-        <section className="flex flex-col bg-white items-center md:w-[70%] ">
-          <AudioWriteup />
-        </section>
-
-        <section className="flex flex-col bg-[#101010] items-center md:w-[70%]">
-          <Footer />
         </section>
       </main>
     </div>

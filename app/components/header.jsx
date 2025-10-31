@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ShoppingCart, Menu, X } from "lucide-react";
 
 export const Header = () => {
@@ -9,16 +10,24 @@ export const Header = () => {
   return (
     <>
       {/* Desktop Header */}
-      <div className="hidden md:flex sticky top-0 w-[70%] pb-9 mt-8 text-white bg-black border-b border-b-gray-600 md:justify-between md:items-center">
+      <div className="hidden md:flex sticky top-0 w-[70%] pb-9 mt-8 text-white border-b border-b-gray-600 md:justify-between md:items-center">
         <div>
           <h1 className="text-[24px] font-black">audiophile</h1>
         </div>
         <div>
           <ul className="font-bold text-[13px] flex flex-row gap-6 ml-10">
-            <li>HOME</li>
-            <li>HEADPHONES</li>
-            <li>SPEAKERS</li>
-            <li>EARPHONES</li>
+            <li className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+              <Link href="/">HOME</Link>
+            </li>
+            <li className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+              <Link href="/headphones">HEADPHONES</Link>
+            </li>
+            <li className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+              <Link href="/speakers">SPEAKERS</Link>
+            </li>
+            <li className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+              <Link href="/earphones">EARPHONES</Link>
+            </li>
           </ul>
         </div>
         <span>
@@ -51,10 +60,18 @@ export const Header = () => {
               </span>
             </div>
             <ul className="flex flex-col gap-4 p-4 font-bold text-[13px]">
-              <li onClick={() => setIsOpen(false)}>HOME</li>
-              <li onClick={() => setIsOpen(false)}>HEADPHONES</li>
-              <li onClick={() => setIsOpen(false)}>SPEAKERS</li>
-              <li onClick={() => setIsOpen(false)}>EARPHONES</li>
+              <li onClick={() => setIsOpen(false)} className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+                <Link href="/">HOME</Link>
+              </li>
+              <li onClick={() => setIsOpen(false)} className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+                <Link href="/headphones">HEADPHONES</Link>
+              </li>
+              <li onClick={() => setIsOpen(false)} className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+                <Link href="/speakers">SPEAKERS</Link>
+              </li>
+              <li onClick={() => setIsOpen(false)} className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
+                <Link href="/earphones">EARPHONES</Link>
+              </li>
             </ul>
           </div>
         </>
