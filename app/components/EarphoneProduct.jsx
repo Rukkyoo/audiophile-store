@@ -15,22 +15,6 @@ const EarphoneProductUnit = [
       "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
     link: "/yx1-earphones",
   },
-  /* {
-    id: 2,
-    image: "/zx7-speaker.jpg",
-    name: "ZX7 SPEAKER",
-    description:
-      "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
-    link: "/zx7-speaker",
-  }, */
-/*   {
-    id: 3,
-    image: "/xx99-mark-1.jpg",
-    name: "XX99 MARK I HEADPHONES",
-    description:
-      "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
-    link: "/xx99-headphones",
-  }, */
 ];
 
 const EarphoneProduct = () => {

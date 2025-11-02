@@ -8,7 +8,7 @@ import Footer from "./Footer.jsx";
 const HeadphoneProductUnit = [
   {
     id: 1,
-    image: "/xx99-headphones.png",
+    image: "/xx99-headphones.jpg",
     type: "NEW PRODUCT",
     name: "XX99 MARK II HEADPHONES",
     description:
@@ -29,7 +29,7 @@ const HeadphoneProductUnit = [
     name: "XX99 MARK I HEADPHONES",
     description:
       "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
-    link: "/xx99-headphones",
+    link: "/xx99-mark-1-headphones",
   },
 ];
 
