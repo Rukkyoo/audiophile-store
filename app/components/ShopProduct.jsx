@@ -40,14 +40,14 @@ const ShopProduct = () => {
             />
           </div>
 
-          <span className="font-bold text-[15px] tracking-wider mt-24 mb-3">
+          <span className="font-bold text-[15px] tracking-wider mt-24 mb-3 text-black">
             {product.name}
           </span>
           <Link
             href={product.link}
             className="flex flex-row items-center justify-center pb-5"
           >
-            <span className="text-[12px] tracking-[0.3em] hover:text-[#D87D4A] transition duration-300">
+            <span className="text-[12px] text-gray-600 tracking-[0.3em] hover:text-[#D87D4A] transition duration-300">
               {" "}
               SHOP
             </span>{" "}
