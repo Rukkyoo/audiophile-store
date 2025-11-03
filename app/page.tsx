@@ -1,9 +1,9 @@
 "use client";
-import { Header } from "./components/Header.jsx";
-import ShopProduct from "./components/ShopProduct.jsx";
-import ProductDesc from "./components/ProductDesc.jsx";
-import AudioWriteup from "./components/AudioWriteup.jsx";
-import Footer from "./components/Footer.jsx"
+import { Header } from "./components/Header";
+import ShopProduct from "./components/ShopProduct";
+import ProductDesc from "./components/ProductDesc";
+import AudioWriteup from "./components/AudioWriteup";
+import Footer from "./components/Footer"
 import Image from "next/image";
 import Link from "next/link.js";
 

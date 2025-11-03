@@ -45,7 +45,6 @@ export const saveOrder = mutation({
       createdAt: Date.now(),
     });
 
-    console.log(`Order ${orderId} saved successfully. Email sending needs to be triggered separately.`);
 
     return orderId;
   },

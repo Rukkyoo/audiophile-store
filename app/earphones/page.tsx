@@ -1,7 +1,7 @@
 "use client";
 
-import { Header } from "../components/Header.jsx";
-import EarphoneProduct from "../components/EarphoneProduct.jsx";
+import { Header } from "../components/Header";
+import EarphoneProduct from "../components/EarphoneProduct";
 
 export default function EarphonesPage() {
   return (

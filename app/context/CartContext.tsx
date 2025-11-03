@@ -28,7 +28,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
 
-  // Load cart from localStorage on mount
   useEffect(() => {
     const savedCart = localStorage.getItem("audiophile-cart");
     if (savedCart) {
@@ -40,8 +39,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
     setIsHydrated(true);
   }, []);
-
-  // Save cart to localStorage whenever it changes
   useEffect(() => {
     if (isHydrated) {
       localStorage.setItem("audiophile-cart", JSON.stringify(cartItems));
@@ -52,14 +49,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setCartItems((prev) => {
       const existingItem = prev.find((i) => i.id === item.id);
       if (existingItem) {
-        // Update quantity if item already exists
+        // To update quantity if item already exists
         return prev.map((i) =>
           i.id === item.id
             ? { ...i, quantity: i.quantity + item.quantity }
             : i
         );
       }
-      // Add new item
+      // To add new item
       return [...prev, item];
     });
   };

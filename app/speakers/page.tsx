@@ -1,9 +1,9 @@
 "use client";
 
-import { Header } from "../components/Header.jsx";
-import HeadphoneProduct from "../components/HeadphoneProduct.jsx";
+import { Header } from "../components/Header";
+import SpeakerProduct from "../components/SpeakerProduct"
 
-export default function HeadphonesPage() {
+export default function SpeakersPage() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-[#141414]">
       <header className="w-full flex flex-row items-center justify-center">
@@ -12,11 +12,11 @@ export default function HeadphonesPage() {
       <main className="text-white bg-white h-screen w-full">
         <div className="bg-[#141414]">
           <h1 className="text-4xl font-bold mb-4 text-center py-8">
-            HEADPHONES
+            SPEAKERS
           </h1>
         </div>
         <section>
-          <HeadphoneProduct />
+          <SpeakerProduct />
         </section>
       </main>
     </div>

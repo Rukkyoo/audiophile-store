@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link.js";
 import Image from "next/image.js";
-import { Header } from "../components/Header.jsx";
+import { Header } from "../components/Header";
 import AddToCart from "../components/AddToCart";
-import { XX99MarkTwoHeadphones } from "../components/Products.js";
-import ShopProduct from "../components/ShopProduct.jsx";
-import AudioWriteup from "../components/AudioWriteup.jsx";
-import Footer from "../components/Footer.jsx";
+import { XX99MarkTwoHeadphones } from "../components/Products";
+import ShopProduct from "../components/ShopProduct";
+import AudioWriteup from "../components/AudioWriteup";
+import Footer from "../components/Footer";
 
 const page = () => {
   return (

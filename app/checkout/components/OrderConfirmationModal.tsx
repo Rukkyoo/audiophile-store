@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatCurrency } from "../utils";
 import type { CartItem } from "../types";
+import { useCart } from "../../context/CartContext";
 
 interface OrderConfirmationModalProps {
   isOpen: boolean;
@@ -18,10 +19,17 @@ export default function OrderConfirmationModal({
   cartItems,
   grandTotal,
 }: OrderConfirmationModalProps) {
+  const { clearCart } = useCart();
+
   if (!isOpen) return null;
 
   const firstItem = cartItems[0];
   const otherItemsCount = cartItems.length - 1;
+
+  const handleBackToHome = () => {
+    clearCart();
+    onClose();
+  };
 
   return (
     <>
@@ -105,7 +113,7 @@ export default function OrderConfirmationModal({
         <Link
           href="/"
           className="block w-full bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold py-4 text-center tracking-wider transition-colors uppercase text-sm"
-          onClick={onClose}
+          onClick={handleBackToHome}
         >
           Back to Home
         </Link>

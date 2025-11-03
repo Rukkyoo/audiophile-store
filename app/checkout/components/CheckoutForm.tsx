@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation, useAction } from "convex/react";
 import { api } from "../../../convex/_generated/api";
+import { useCart } from "../../context/CartContext";
 import BillingDetailsSection from "./BillingDetailsSection";
 import ShippingInfoSection from "./ShippingInfoSection";
 import PaymentDetailsSection from "./PaymentDetailsSection";
@@ -24,6 +25,7 @@ export default function CheckoutForm({
   vatRate,
 }: CheckoutFormProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { clearCart } = useCart();
   const saveOrder = useMutation(api.tasks.saveOrder);
   const sendOrderConfirmationEmail = useAction(api.actions.sendOrderConfirmationEmail);
 
@@ -97,7 +99,6 @@ export default function CheckoutForm({
       // For sending confirmation email
       try {
         await sendOrderConfirmationEmail({ orderId });
-        console.log("Order confirmation email sent successfully");
       } catch (emailError) {
         console.error("Email sending failed:", emailError);
       }
@@ -105,6 +106,7 @@ export default function CheckoutForm({
       setIsModalOpen(true);
     } catch (error) {
       console.error("Order submission failed:", error);
+      alert("Order submission failed. Please try again.");
     }
   };
 
