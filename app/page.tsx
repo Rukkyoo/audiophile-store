@@ -5,6 +5,7 @@ import ProductDesc from "./components/ProductDesc.jsx";
 import AudioWriteup from "./components/AudioWriteup.jsx";
 import Footer from "./components/Footer.jsx"
 import Image from "next/image";
+import Link from "next/link.js";
 
 export default function Home() {
   return (
@@ -43,7 +44,9 @@ export default function Home() {
                 made for the passionate music enthusiast
               </p>
               <button className="mt-6 px-6 py-3 bg-[#D87D4A] transition-all duration-300 text-white font-bold rounded hover:bg-[#FBAF85]">
+                <Link href="/xx99-headphones">  
                 SEE PRODUCT
+                </Link>
               </button>
             </div>
           </div>

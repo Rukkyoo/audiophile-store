@@ -8,6 +8,8 @@
  * @module
  */
 
+import type * as actions from "../actions.js";
+import type * as emailTemplate from "../emailTemplate.js";
 import type * as tasks from "../tasks.js";
 
 import type {
@@ -25,6 +27,8 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  actions: typeof actions;
+  emailTemplate: typeof emailTemplate;
   tasks: typeof tasks;
 }>;
 declare const fullApiWithMounts: typeof fullApi;

@@ -13,7 +13,6 @@ export const Header = () => {
 
   return (
     <>
-      {/* Fixed header (keeps nav visible) */}
       <div className="fixed top-0 left-0 right-0 z-40 backdrop-blur-sm bg-black">
         {/* Desktop Header */}
         <div className="hidden md:flex w-[70%] mx-auto pb-9 mt-8 text-white border-b border-b-gray-600 md:justify-between md:items-center">
@@ -69,7 +68,6 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* spacer to offset fixed header height */}
       <div className="h-24 md:h-28" aria-hidden />
 
       {/* Mobile Sidebar */}
