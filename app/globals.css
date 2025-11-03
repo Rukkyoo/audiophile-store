@@ -5,6 +5,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary-orange: #D87D4A;
+  --color-text-dark: #000000;
+  --color-text-gray: #7D7D7D;
+  --color-border-gray: #CFCFCF;
+  --color-background-light: #F1F1F1;
+  --color-background-white: #FFFFFF;
 }
 
 @theme inline {
@@ -12,6 +18,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-primary-orange: var(--color-primary-orange);
+  --color-text-dark: var(--color-text-dark);
+  --color-text-gray: var(--color-text-gray);
+  --color-border-gray: var(--color-border-gray);
+  --color-background-light: var(--color-background-light);
+  --color-background-white: var(--color-background-white);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -23,4 +35,71 @@
 
 body {
   font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+/* Text styles for checkout page */
+@utility checkout-heading {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.14px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+@utility section-heading {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.93px;
+  text-transform: uppercase;
+  color: var(--color-primary-orange);
+}
+
+@utility form-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.21px;
+  color: var(--color-text-dark);
+}
+
+@utility form-input {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  padding: 18px 24px;
+  border: 1px solid var(--color-border-gray);
+  border-radius: 8px;
+  color: var(--color-text-dark);
+  
+  &::placeholder {
+    color: var(--color-text-gray);
+    opacity: 0.4;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary-orange);
+  }
+}
+
+@utility summary-text {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  color: var(--color-text-dark);
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+@utility summary-price {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: var(--color-text-dark);
+}
+
+@utility grand-total-price {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: var(--color-primary-orange);
 }

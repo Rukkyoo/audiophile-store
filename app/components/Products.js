@@ -1,6 +1,6 @@
 export const XX99MarkTwoHeadphones = [
   {
-    id: 1,
+    id: "xx99-mark-2",
     displayImage: "/image-product-xx99-mark-2.jpg",
     type: "NEW PRODUCT",
     name: "XX99 Mark II Headphones",
@@ -22,7 +22,7 @@ export const XX99MarkTwoHeadphones = [
 
 export const XX99MarkOneHeadphones = [
   {
-    id: 1,
+    id: "xx99-mark-1",
     displayImage: "/image-product-xx99-mark-1.jpg",
     name: "XX99 Mark I Headphones",
     description:
@@ -42,7 +42,7 @@ export const XX99MarkOneHeadphones = [
 
 export const XX59Headphones = [
   {
-    id: 1,
+    id: "xx59",
     displayImage: "/image-product-xx59.jpg",
     name: "XX59 Headphones",
     description:
@@ -62,7 +62,7 @@ export const XX59Headphones = [
 
 export const ZX9Speaker = [
   {
-    id: 1,
+    id: "zx9-speaker",
     displayImage: "/image-product-zx9.jpg",
     type: "NEW PRODUCT",
     name: "ZX9 Speaker",
@@ -84,7 +84,7 @@ export const ZX9Speaker = [
 
 export const ZX7Speaker = [
   {
-    id: 1,
+    id: "zx7-speaker",
     displayImage: "/image-product-zx7.jpg",
     name: "ZX7 Speaker",
     description:
@@ -105,7 +105,7 @@ export const ZX7Speaker = [
 
 export const YX1Earphones = [
   {
-    id: 1,
+    id: "yx1-earphones",
     displayImage: "/image-product-yx1.jpg",
     name: "YX1 Earphones",
     description:

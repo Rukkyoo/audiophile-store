@@ -2,49 +2,69 @@
 
 import { useForm } from "react-hook-form";
 import { Minus, Plus } from "lucide-react";
+import { useCart } from "../context/CartContext";
 
-const AddToCart = ({ productId, productName, price, maxQuantity = 99 }) => {
+interface AddToCartProps {
+  productId: string | number;
+  productName: string;
+  price: number;
+  maxQuantity?: number;
+  image?: string;
+}
+
+interface FormData {
+  quantity: number;
+}
+
+const AddToCart: React.FC<AddToCartProps> = ({
+  productId,
+  productName,
+  price,
+  maxQuantity = 99,
+  image,
+}) => {
   const {
     register,
     handleSubmit,
     watch,
     setValue,
     formState: { errors, isSubmitting },
-  } = useForm({
+  } = useForm<FormData>({
     defaultValues: {
       quantity: 1,
     },
   });
 
   const quantity = watch("quantity");
+  const { addToCart, setIsCartOpen } = useCart();
 
   const incrementQuantity = () => {
-    const currentQty = parseInt(quantity) || 1;
+    const currentQty = quantity;
     if (currentQty < maxQuantity) {
       setValue("quantity", currentQty + 1);
     }
   };
 
   const decrementQuantity = () => {
-    const currentQty = parseInt(quantity) || 1;
+    const currentQty = quantity;
     if (currentQty > 1) {
       setValue("quantity", currentQty - 1);
     }
   };
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: FormData) => {
     try {
-      // TODO: Integrate with Convex backend to add item to cart
-      
-      console.log("Adding to cart:", {
-        productId,
-        productName,
-        quantity: data.quantity,
+      // Add item to cart via CartContext
+      addToCart({
+        id: String(productId),
+        name: productName,
         price,
-        total: price * data.quantity,
+        quantity: data.quantity,
+        image: image ?? "",
       });
 
-      alert(`Added ${data.quantity} ${productName} to cart!`);
+      // Open cart modal so user sees added item
+      setIsCartOpen(true);
     } catch (error) {
       console.error("Error adding to cart:", error);
       alert("Failed to add to cart. Please try again.");

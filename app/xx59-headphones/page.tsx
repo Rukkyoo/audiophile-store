@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link.js";
 import Image from "next/image.js";
 import { Header } from "../components/Header.jsx";
-import AddToCart from "../components/AddToCart.jsx";
+import AddToCart from "../components/AddToCart";
 import { XX59Headphones } from "../components/Products.js";
 import ShopProduct from "../components/ShopProduct.jsx";
 import AudioWriteup from "../components/AudioWriteup.jsx";
@@ -42,7 +42,12 @@ const page = () => {
               <h6 className="text-black text-left w-full pl-8 font-bold">
                 $ {product.price}
               </h6>
-              <AddToCart productId={product.id} productName={product.name} price={product.price} />
+              <AddToCart
+                productId={product.id}
+                productName={product.name}
+                price={product.price}
+                image={product.displayImage}
+              />
               <h2 className="text-2xl font-bold px-6 mb-4 text-left w-full mt-6 text-black pl-8">
                 FEATURES
               </h2>
@@ -93,7 +98,7 @@ const page = () => {
             YOU MAY ALSO LIKE
           </h2>
 
-           {/* XX99 MARK II */}
+          {/* XX99 MARK II */}
           <div className="flex flex-col items-center mb-10 bg-[#f1f1f1] mx-8 mt-10">
             <Image
               src={"/xx99.webp"}
