@@ -13,14 +13,14 @@ export const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-40 backdrop-blur-sm bg-black">
+      <div className="fixed top-0 left-0 right-0 z-100 backdrop-blur-sm bg-[#181818]">
         {/* Desktop Header */}
-        <div className="hidden md:flex w-[70%] mx-auto pb-9 mt-8 text-white border-b border-b-gray-600 md:justify-between md:items-center">
+        <div className="hidden md:flex w-[90%] lg:w-[80%] xl:w-[70%] mx-auto pb-9 mt-8 text-white border-b border-b-gray-600 md:justify-between md:items-center">
           <div>
             <h1 className="text-[24px] font-black">audiophile</h1>
           </div>
           <div>
-            <ul className="font-bold text-[13px] flex flex-row gap-6 ml-10">
+            <ul className="font-bold text-[13px] flex flex-row gap-4 lg:gap-6 ml-4 lg:ml-10">
               <li className="hover:text-[#D87D4A] tracking-[0.2em] transition-colors cursor-pointer">
                 <Link href="/">HOME</Link>
               </li>
@@ -49,7 +49,7 @@ export const Header = () => {
         </div>
 
         {/* Mobile Header */}
-        <div className="md:hidden bg-black w-full pb-9 mt-8 text-white border-b border-b-gray-600 flex justify-between items-center px-6">
+        <div className="md:hidden bg-[#181818] w-full pb-9 mt-8 text-white border-b border-b-gray-600 flex justify-between items-center px-6">
           <span onClick={() => setIsOpen(!isOpen)}>
             <Menu />
           </span>

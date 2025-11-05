@@ -25,7 +25,7 @@ const CartModal = () => {
       />
 
       {/* Modal */}
-      <div className="fixed top-24 right-4 md:right-20 w-[90%] md:w-[400px] bg-white rounded-lg shadow-xl z-50 p-6 max-h-[80vh] overflow-hidden flex flex-col">
+      <div className="fixed top-24 md:top-28 right-4 md:right-8 lg:right-20 w-[90%] md:w-[400px] lg:w-[450px] bg-white rounded-lg shadow-xl z-50 p-6 md:p-8 max-h-[80vh] overflow-hidden flex flex-col">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-lg font-bold tracking-wider">

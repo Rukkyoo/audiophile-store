@@ -103,7 +103,7 @@ const AddToCart: React.FC<AddToCartProps> = ({
           <button
             type="button"
             onClick={incrementQuantity}
-            className="px-4 py-3 text-slate-500 hover:text-orange-500 transition-colors"
+            className="px-1 py-3 text-slate-500 hover:text-orange-500 transition-colors"
             aria-label="Increase quantity"
           >
             <Plus size={16} />

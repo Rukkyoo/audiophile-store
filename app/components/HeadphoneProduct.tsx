@@ -36,20 +36,36 @@ const HeadphoneProductUnit = [
 const HeadphoneProduct = () => {
   return (
     <div className="text-black">
-      {HeadphoneProductUnit.map((headphone) => (
-        <div key={headphone.id} className="mb-10 px-5 flex flex-col items-center">
-          <Image
-            src={headphone.image}
-            alt={headphone.name}
-            width={600}
-            height={20}
-          />
-          <h6 className="text-[#D87D4A] tracking-[0.8em] mt-5">{headphone.type}</h6>
-          <h1 className="text-3xl font-bold px-4 mb-4 mt-6 text-center">{headphone.name}</h1>
-          <p className="text-center text-gray-500 opacity-75 px-10 mb-5">{headphone.description}</p>
-          <button className="px-6 text-sm py-3 bg-[#D87D4A] transition-all duration-300 text-white font-bold rounded hover:bg-[#FBAF85]">
-            <Link href={headphone.link}>SEE PRODUCT</Link>
-          </button>
+      {HeadphoneProductUnit.map((headphone, index) => (
+        <div 
+          key={headphone.id} 
+          className={`mb-16 md:mb-24 px-5 md:px-10 lg:px-10  flex flex-col   ${
+            index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+          } md:items-center md:gap-8 max-w-7xl mx-auto`}
+        >
+          <div className="md:w-1/2">
+            <Image
+              src={headphone.image}
+              alt={headphone.name}
+              width={600}
+              height={20}
+              className="rounded-lg w-full h-auto lg:w-[400px] lg:mt-20"
+            />
+          </div>
+          <div className="md:w-1/2 flex flex-col items-center lg:px-10 md:items-start text-center md:text-left">
+            <h6 className="text-[#D87D4A] text-xs md:text-sm tracking-[0.5em] md:tracking-[0.8em] mt-5 md:mt-0">
+              {headphone.type}
+            </h6>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold px-4 md:px-0 mb-4 mt-6">
+              {headphone.name}
+            </h1>
+            <p className="text-center md:text-left text-gray-500 opacity-75 px-6 md:px-0 mb-5 text-sm md:text-base">
+              {headphone.description}
+            </p>
+            <button className="px-6 md:px-8 text-sm py-3 bg-[#D87D4A] transition-all duration-300 text-white font-bold rounded hover:bg-[#FBAF85]">
+              <Link href={headphone.link}>SEE PRODUCT</Link>
+            </button>
+          </div>
         </div>
       ))}
 

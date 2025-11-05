@@ -14,7 +14,7 @@ export default function CheckoutPage() {
   const vatRate = 0.2;
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
+    <div className="min-h-screen flex flex-col ">
       {/* Header */}
       <header className="w-full flex flex-row items-center justify-center bg-black">
         <Header />
@@ -22,7 +22,7 @@ export default function CheckoutPage() {
 
       {/* Main Content */}
       <main className="flex-1 bg-[#F1F1F1]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-8 md:py-12">
           {/* Go Back Link */}
           <Link
             href="/"

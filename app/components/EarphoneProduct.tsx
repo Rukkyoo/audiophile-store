@@ -21,19 +21,23 @@ const EarphoneProduct = () => {
   return (
     <div className="text-black">
       {EarphoneProductUnit.map((earphone) => (
-        <div key={earphone.id} className="mb-10 px-5 flex flex-col items-center">
+        <div key={earphone.id} className="mb-10 px-5 flex flex-col items-center lg:flex-row lg:items-center lg:justify-center lg:gap-20 lg:px-20 lg:py-20 lg:max-w-7xl lg:mx-auto">
+          
           <Image
             src={earphone.image}
             alt={earphone.name}
             width={600}
-            height={20}
+            height={600}
+            className="rounded-lg w-full h-auto lg:w-[450px] lg:h-[450px] lg:object-cover"
           />
-          <h6 className="text-[#D87D4A] tracking-[0.8em] mt-5">{earphone.type}</h6>
-          <h1 className="text-3xl font-bold px-4 mb-4 mt-6 text-center">{earphone.name}</h1>
-          <p className="text-center text-gray-500 opacity-75 px-10 mb-5">{earphone.description}</p>
-          <button className="px-6 text-sm py-3 bg-[#D87D4A] transition-all duration-300 text-white font-bold rounded hover:bg-[#FBAF85]">
+          <div className="flex flex-col items-center lg:items-start text-left lg:w-[500px] lg:justify-center">
+          <h6 className="text-[#D87D4A] tracking-[0.8em] mt-5 text-sm">{earphone.type}</h6>
+          <h1 className="text-3xl font-bold px-4 mb-4 mt-6 lg:text-4xl lg:px-0">{earphone.name}</h1>
+          <p className="text-gray-500 opacity-75 px-10 mb-5 lg:px-0 lg:pr-10">{earphone.description}</p>
+          <button className="px-6 text-sm py-3 bg-[#D87D4A] transition-all duration-300 text-white font-bold rounded hover:bg-[#FBAF85] lg:px-8">
             <Link href={earphone.link}>SEE PRODUCT</Link>
           </button>
+          </div>
         </div>
       ))}
 
